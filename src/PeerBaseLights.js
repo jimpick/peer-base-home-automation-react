@@ -10,7 +10,7 @@ export default function Example() {
     let count3 = count2;
     const intervalId = setInterval(() => {
       console.log('Jim2');
-      count3 += 0.1;
+      count3 += 1;
       setCount2(count3);
     }, 1000);
     return function cleanup () {
@@ -21,7 +21,7 @@ export default function Example() {
 
   return (
     <div>
-      <p>You clicked {count + count2} times</p>
+      <p>You clicked {count * 10 + count2} times</p>
       <button onClick={() => setCount(count + 1)}>
         Click me
       </button>
