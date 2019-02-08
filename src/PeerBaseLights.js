@@ -65,12 +65,10 @@ export default function PeerBaseLights () {
       return cleanup;
 
       function update () {
-        console.log('Jim1', collaboration.shared.value());
         setRoomsSet(Set(collaboration.shared.value()));
       }
 
       function updatePeers (peers) {
-        console.log('Jim2 peers', peers);
         setPeers(Set(peers));
       }
 
@@ -109,7 +107,6 @@ export default function PeerBaseLights () {
 
   function toggle (room) {
     return () => {
-      console.log('Toggle:', room);
       if (roomsSet.has(room)) {
         roomsShared.remove(Date.now(), room);
       } else {
