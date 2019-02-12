@@ -14,7 +14,7 @@ const rooms = [
 ];
 
 async function startPeerBase () {
-  const app = PeerBase('lights-demo', {
+  const app = PeerBase('lights-demo-2', {
     ipfs: {
       repo: new IPFSRepo('ipfs', {
         lock: 'memory',
